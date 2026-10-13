@@ -1,0 +1,41 @@
+:root{
+  --brand:#B32524;--brand-d:#8E1B1A;--accent:#B32524;
+  --bg:#FFFFFF;--bg2:#F5F5F7;--text:#1C1C1E;--text2:#5C5C63;--line:rgba(0,0,0,.10);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#111113;--bg2:#1E1E21;--text:#F5F5F7;--text2:#A1A1AA;--line:rgba(255,255,255,.12);--accent:#F26B6A}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Inter,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.top{background:var(--brand);color:#fff;padding:34px 20px 30px}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+.top .wrap{padding:0}
+.brand{display:inline-flex;align-items:center;gap:8px;font-weight:700;letter-spacing:.14em;font-size:13px;
+  background:#fff;color:var(--brand);padding:4px 12px;border-radius:999px}
+.top h1{margin:14px 0 4px;font-size:clamp(28px,5vw,40px);line-height:1.1;letter-spacing:-.03em}
+.top p{margin:0;opacity:.9;font-size:14px}
+main{padding:28px 0 20px}
+h2{font-size:21px;letter-spacing:-.02em;margin:34px 0 8px}
+h3{font-size:16px;margin:20px 0 4px}
+p,li{color:var(--text)}
+p{margin:8px 0}
+ul,ol{padding-left:22px;margin:8px 0}
+li{margin:4px 0}
+a{color:var(--accent)}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0}
+.card p{margin:4px 0}
+.muted{color:var(--text2);font-size:14px}
+.caps{font-size:14px;text-transform:none}
+.btn{display:inline-block;background:var(--brand);color:#fff!important;text-decoration:none;
+  font-weight:600;padding:12px 22px;border-radius:12px;margin:6px 8px 6px 0}
+.btn.alt{background:var(--bg2);color:var(--text)!important;border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:16px 0}
+.grid .card{margin:0}
+.grid b{display:block;margin-bottom:2px}
+.stars{font-size:38px;letter-spacing:6px;color:var(--accent);margin:8px 0}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:22px 0 40px;font-size:14px;color:var(--text2)}
+footer nav a{margin-right:16px;display:inline-block}
+@media print{.top{background:none;color:#000}.brand{border:1px solid #000}}
